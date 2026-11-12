@@ -11,7 +11,7 @@ In this project, I used:
 
 ## Project Architecture
 
-Local Machine → Terraform → AWS VPC → Public Subnet → EC2 Instance → File Provisioner → Remote-Exec Provisioner → Flask Application
+![Terraform Provisioners Project Architecture](screenshots/project-architecture.png)
 
 ## Technologies Used
 
@@ -30,13 +30,13 @@ Local Machine → Terraform → AWS VPC → Public Subnet → EC2 Instance → F
 
 ---
 
-## Project Implementation – Step by Step
+## Project Implementation Workflow
 
 ### Step 1: Project Folder Structure
 
-Created the project folder with Terraform configuration, Flask application, README, Git ignore file, and screenshots.
+Organized the project repository with Terraform configuration files, Flask application code, documentation, Git ignore rules, and implementation evidence.
 
-**Screenshot:**
+**Project Repository Structure:**
 
 ![Project Folder Structure](screenshots/01-project-structure.png)
 
@@ -44,7 +44,7 @@ Created the project folder with Terraform configuration, Flask application, READ
 
 Configured the AWS provider and infrastructure resources, including VPC, public subnet, Internet Gateway, route table, security group, key pair, and EC2 instance.
 
-**Screenshot:**
+**Infrastructure as Code (IaC) Configuration:**
 
 ![Terraform Configuration](screenshots/02-terraform-configuration.png)
 
@@ -52,7 +52,7 @@ Configured the AWS provider and infrastructure resources, including VPC, public 
 
 Created a Python Flask application to display a success message when accessed through a web browser.
 
-**Screenshot:**
+**Application Source Code:**
 
 ![Flask Application](screenshots/03-flask-application.png)
 
@@ -66,7 +66,7 @@ Initialized the Terraform working directory and downloaded the required AWS prov
 terraform init
 ```
 
-**Screenshot:**
+**Terraform Initialization Output:**
 
 ![Terraform Initialization](screenshots/04-terraform-init.png)
 
@@ -80,7 +80,7 @@ Validated the Terraform configuration to check for syntax and configuration erro
 terraform validate
 ```
 
-**Screenshot:**
+**Configuration Validation Results:**
 
 ![Terraform Validation](screenshots/05-terraform-validate.png)
 
@@ -94,7 +94,7 @@ Reviewed the execution plan to understand which AWS resources Terraform would cr
 terraform plan
 ```
 
-**Screenshot:**
+**Infrastructure Execution Plan:**
 
 ![Terraform Plan](screenshots/06-terraform-plan.png)
 
@@ -108,7 +108,7 @@ Applied the Terraform configuration to create AWS infrastructure and deploy the 
 terraform apply
 ```
 
-**Screenshot:**
+**Infrastructure Deployment Results:**
 
 ![Terraform Apply](screenshots/07-terraform-apply.png)
 
@@ -116,7 +116,7 @@ terraform apply
 
 Verified that the EC2 instance was successfully created in the AWS Management Console.
 
-**Screenshot:**
+**AWS EC2 Resource Provisioning:**
 
 ![AWS EC2 Instance](screenshots/08-aws-ec2-instance.png)
 
@@ -133,7 +133,7 @@ provisioner "file" {
 }
 ```
 
-**Screenshot:**
+**File Provisioner – Transfer Verification:**
 
 ![File Provisioner](screenshots/09-ec2-file-transfer.png)
 
@@ -149,7 +149,7 @@ Tasks performed:
 - Installed Flask.
 - Started the Flask application.
 
-**Screenshot:**
+**Remote-Exec Provisioner – Configuration Execution:**
 
 ![Remote-Exec Provisioner](screenshots/10-remote-exec-installation.png)
 
@@ -163,7 +163,7 @@ Accessed the deployed Flask application using the EC2 instance's public IPv4 add
 http://<EC2-PUBLIC-IP>
 ```
 
-**Screenshot:**
+**Application Deployment – Browser Verification:**
 
 ![Flask Application in Browser](screenshots/11-application-browser.png)
 
@@ -183,7 +183,7 @@ curl http://localhost
 Hello, Irfan This Terraform Project is deployed and created Successfully!
 ```
 
-**Screenshot:**
+**Application Runtime Validation:**
 
 ![Application Verification](screenshots/12-application-verification.png)
 
@@ -243,6 +243,10 @@ Confirm the operation when prompted.
 **Irfan Ahmad**  
 DevOps Engineer
 
-**Project:** Terraform Provisioners – AWS EC2 Flask Application Deployment
-
 ---
+- **Project Repository:** [Terraform Provisioners Project](https://github.com/Irfan-devops1/terraform-provisioners-project)
+
+- **GitHub Profile:** [Irfan-devops1](https://github.com/Irfan-devops1)
+
+
+**Project:** Terraform Provisioners – AWS EC2 Flask Application Deployment
