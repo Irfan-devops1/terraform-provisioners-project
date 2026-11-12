@@ -106,12 +106,21 @@ resource "aws_instance" "server" {
 
   provisioner "remote-exec" {
     inline = [
+      # Update Ubuntu packages
       "sudo apt update -y",
+
+      # Install Python and virtual environment
       "sudo apt install -y python3-pip python3-venv",
+
+       # Create Python virtual environment
       "cd /home/ubuntu",
       "python3 -m venv venv",
+
+      # Install Flask
       "./venv/bin/pip install flask",
-      "sudo nohup ./venv/bin/python app.py > app.log 2>&1 < /dev/null &"
+
+         # Start Flask automatically
+      "sudo bash -c 'cd /home/ubuntu && nohup ./venv/bin/python app.py > app.log 2>&1 < /dev/null &'"
     ]
   }
 }
